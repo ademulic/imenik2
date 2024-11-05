@@ -1,13 +1,102 @@
-body {
+*{
+  padding: 0;
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  transition: 0.3s ease-in-out;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.App{
+  display: flex; 
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+.App aside{
+  height:100%;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.App main{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); 
+  gap: 20px;
+  width: 70%;
+  height: 100%;
+  padding: 20px;
+  background-color: bisque;
+}
+.App main .card{
+  height:350px;
+  width:200px;
+  background-color: white;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+} 
+.App aside{
+  background-color: crimson;
+}
+.App aside form{
+  height: 400px;
+  background-color: white;
+  padding: 30px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 10px;
+}
+.App aside form h1{
+  color: crimson;
+}
+.App aside form div{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
+}
+.App aside form input[type="text"]{
+  padding: 3px 5px;
+  font-size: 14px;
+  border: none;
+  border-bottom: 1px solid black;
+}
+.App aside form input:focus{
+  outline: none;
+  border-bottom: 1px solid crimson;
+}
+.App aside form select, .App aside form .radio-btns{
+  width: unset;
+  align-self: flex-start;
+}
+.App aside form select{
+  width: 100%;
+  font-size: 14px;
+}
+.App aside form button{
+  width: 100%;
+  padding: 5px;
+  font-size: 14px;
+  border: 1px solid crimson;
+  background-color: crimson;
+  color: white;
+  cursor:pointer;
+}
+.App aside form button:hover{
+  background-color: white;
+  color: crimson;
+  
+  border-radius: 20px;
+}
+.App aside form button:active{
+  background-color: #8f0924;
+  color: white;
 }
